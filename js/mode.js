@@ -14,7 +14,7 @@ const setDifficulty = evt => {
                 localStorage.setItem("mo", mode);
                 localStorage.setItem("mode","easy")
                 console.log(localStorage.getItem("mode"));
-                //window.location.replace("Game.html");
+                window.location.replace("Game.html");
             break;
             case 'medium':
                 localStorage.clear();

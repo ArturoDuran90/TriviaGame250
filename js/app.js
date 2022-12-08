@@ -13,7 +13,7 @@ let myAnswers = null;
 
 let increment = 0;
 let userScore = 0;
-
+let TheData = [];
 //const fs = require('fs');
 
 var setURL = localStorage.getItem("mo");
@@ -34,6 +34,7 @@ const shuffleArr = myArr => {
 
 
 const main = () => {
+    TheData.push(myData);
     document.getElementById('question').innerHTML = myData.results[increment].question; //Grabs 1 object in Results Arraylist and with questions and answers
     myAnswers = [
         [myData.results[increment].correct_answer, true],
@@ -120,7 +121,7 @@ fetch(setURL)
 .then(data => {
     myData = data;
     main();
-    saveToDB();
+   // saveToDB();
 });
 
 
